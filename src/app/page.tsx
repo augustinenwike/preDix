@@ -50,7 +50,7 @@ const HomePage: React.FC = () => {
         <h2 className="text-4xl mt-20 font-bold text-gray-900">Featured Events</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {featuredEvents.map((event, index) => (
-            <EventCard key={index} {...event} />
+            <EventCard key={index} {...event} status={event.status as "open" | "closed" | "resolved"}/>
           ))}
         </div>
         <div className='flex justify-center items-center'>

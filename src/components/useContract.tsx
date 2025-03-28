@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import Abi from "../components/Abi.json"
 
 
-export const useReadAppContract = (functionName: string, args: any[] = []) => {
+export const useReadAppContract = (functionName: string, args: unknown[] = []) => {
     const [isMounted, setIsMounted] = useState(false)
 
     const CONTRACT_ADDRESS = '0x1388E0d9E5e25c4442F4bFAFAa990759Dd065224';

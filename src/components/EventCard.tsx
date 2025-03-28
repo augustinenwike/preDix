@@ -12,7 +12,6 @@ interface EventCardProps {
 
 const EventCard: React.FC<EventCardProps> = ({ title, options, poolId, timeRemaining, status }) => {
   const [stakeAmounts, setStakeAmounts] = useState<{ [key: number]: string }>({});
-  const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const [isStaking, setIsStaking] = useState(false);
 
   const statusColors = {
@@ -85,7 +84,7 @@ const EventCard: React.FC<EventCardProps> = ({ title, options, poolId, timeRemai
                 onClick={() => handleStake(index)}
                 disabled={status !== 'open' || isStaking || !stakeAmounts[index]}
               >
-                {isStaking && selectedOption === index ? 'Staking...' : 'Stake'}
+                {isStaking ? 'Staking...' : 'Stake'}
               </button>
             </div>
           </div>

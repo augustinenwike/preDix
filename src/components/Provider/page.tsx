@@ -40,8 +40,6 @@ export function MyProvider({
           accentColor: '#127073',
           accentColorForeground: 'white',
           borderRadius: 'medium',
-          fontStack: 'Montserrat',
-          fontFamily: 'Montserrat',
         })}>
           {children}
         </RainbowKitProvider>

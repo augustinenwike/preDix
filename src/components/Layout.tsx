@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
-import { Space_Grotesk, PT_Mono, Montserrat } from "next/font/google";
+import { Montserrat } from "next/font/google";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -29,6 +29,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 </Link>
                 <Link className='text-gray-700 hover:text-gray-900 px-1 py-2 text-lg hover:bg-red-500' href="/events">
                   Events
+                </Link>
+                <Link className='text-gray-700 hover:text-gray-900 px-1 py-2 text-lg hover:bg-red-500' href="/profile">
+                  Profile
                 </Link>
               </div>
 
